@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+      "aws-crt": "1.20.0"
+    }
+  }
+  
