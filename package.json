@@ -1,17 +1,32 @@
 {
-  "name": "lambda-proxy",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@vendia/lambda-proxy",
+  "version": "0.0.1",
+  "description": "A local development tool for AWS Lambda functions",
   "main": "index.js",
   "bin": {
     "lambda-proxy": "./bin/lambda_proxy"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vendia/lambda-proxy.git"
+  },
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "local development",
+    "Serverless"
+  ],
+  "author": "Jake Partusch <jake@vendia.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vendia/lambda-proxy/issues"
+  },
+  "homepage": "https://github.com/vendia/lambda-proxy#readme",
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "@types/archiver": "^6.0.2",
@@ -26,8 +41,6 @@
     "archiver": "^7.0.1",
     "aws-iot-device-sdk-v2": "^1.19.5",
     "consola": "^3.2.3",
-    "esbuild": "^0.23.0",
-    "ts-node": "^10.9.2",
-    "yargs": "^17.7.2"
+    "esbuild": "^0.23.0"
   }
 }
