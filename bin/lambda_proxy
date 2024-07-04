@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+const yargs = require("yargs/yargs");
+const { hideBin } = require("yargs/helpers");
+require("ts-node").register({ project: `${__dirname}/../tsconfig.json` });
+const { handler } = require("../index");
+
+yargs(hideBin(process.argv))
+  .command(
+    "start",
+    "start the proxy",
+    function (yargs) {
+      return yargs
+        .option("name", {
+          describe:
+            "The lambda function to replace with the local file. This can either be the full function name (eg. VendiaShareDeployer) or the function alias for data plane operations (eg. graphql).",
+          type: "string",
+          demandOption: false,
+          alias: "n",
+        })
+        .option("path", {
+          describe:
+            "The path to the local file relative to the current working directory",
+          type: "string",
+          demandOption: false,
+          alias: "p",
+        })
+        .option("skip-deploy", {
+          describe: "Skip the deployment of the proxy",
+          type: "boolean",
+          demandOption: false,
+          alias: "s",
+        });
+    },
+    (argv) => {
+      handler(argv);
+    }
+  )
+
+  .parse();
