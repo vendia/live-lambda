@@ -1,10 +1,10 @@
-# lambda-proxy
+# live-lambda
 
 A powerful development CLI tool designed for AWS Lambda functions. Proxy your lambda function executions directly to your development environment to enable quicker iterations and hot reloading.
 
 ## Overview
 
-![Lambda Proxy](local-proxy.png)
+![Live Lambda](./live-lambda.png)
 
 ## Features
 
@@ -15,24 +15,24 @@ A powerful development CLI tool designed for AWS Lambda functions. Proxy your la
 
 ## Installation
 
-Install `lambda-proxy` globally via npm:
+Install `live-lambda` globally via npm:
 
 ```bash
-npm install -g @vendia/lambda-proxy
+npm install -g @vendia/live-lambda
 ```
 
 Or, add it to your project as a development dependency:
 
 ```bash
-npm install --save-dev @vendia/lambda-proxy
+npm install --save-dev @vendia/live-lambda
 ```
 
 ## Usage
 
-After installation, you can use lambda-proxy in your command line:
+After installation, you can use live-lambda in your command line:
 
 ```bash
-lambda-proxy [options]
+live-lambda [options]
 ```
 
 ## Options
@@ -49,7 +49,7 @@ lambda-proxy [options]
 Here's a simple example to get you started:
 
 ```bash
-lambda-proxy start --name HelloWorldFunction --path lambda/index.js
+live-lambda start --name HelloWorldFunction --path lambda/index.js
 ```
 
 This command does something amazing with your AWS Lambda functions.
@@ -60,4 +60,4 @@ We welcome contributions! Please read our Contributing Guide for details on how 
 
 ### License
 
-lambda-proxy is licensed under the ISC license. See the LICENSE file for more details.
+live-lambda is licensed under the ISC license. See the LICENSE file for more details.

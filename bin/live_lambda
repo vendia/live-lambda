@@ -7,7 +7,7 @@ const { handler } = require("../index");
 yargs(hideBin(process.argv))
   .command(
     "start",
-    "start the proxy",
+    "start the live lambda proxy",
     function (yargs) {
       return yargs
         .option("name", {

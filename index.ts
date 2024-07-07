@@ -17,9 +17,7 @@ import { once } from "events";
 import * as fs from "fs";
 import * as path from "path";
 import { Argv } from "yargs";
-
-export const command = "proxy";
-export const description = `Proxy requests from a lambda to a local file`;
+import * as os from "os";
 
 interface Args {
   name?: string;
@@ -277,7 +275,7 @@ const run = async ({
   consola.start("Deploying local proxy...");
 
   const tmpdir = fs.mkdtempSync("tmp-proxy-");
-  const fullyResolvedTmpDir = path.resolve(process.cwd(), tmpdir);
+  const fullyResolvedTmpDir = path.resolve(os.tmpdir(), tmpdir);
 
   consola.info("Fetching lambda configuration for", functionName);
   let lambdaConfig = await getLambdaConfiguration(functionName, region);
