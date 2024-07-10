@@ -36,15 +36,16 @@ live-lambda [options]
 ## Options
 
 -n, --name: The name of the lambda function to proxy.
+
 -p, --path: The path to the local file to proxy to.
+
 --skip-deploy: Skip deployment of the proxy and restart the websocket listener
 
 -v, --version: Display the version number.
+
 -h, --help: Show help and usage information.
 
 ## Examples
-
-Here's a simple example to get you started:
 
 ```bash
 live-lambda start --name HelloWorldFunction --path lambda/index.js
