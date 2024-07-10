@@ -33,14 +33,20 @@ const invokeByPath = async (path: string, event: any, context: any) => {
   const { handler: fn } = await import(
     `${path}?cacheBust=${Number(new Date())}`
   );
-  const response = await fn(event, context);
-  for (const path in require.cache) {
-    if (path.endsWith(".js")) {
-      // only clear *.js, not *.node
-      delete require.cache[path];
+  console.log(handler);
+  try {
+    const response = await fn(event, context);
+    return response;
+  } catch (e) {
+    throw e;
+  } finally {
+    for (const path in require.cache) {
+      if (path.endsWith(".js")) {
+        // only clear *.js, not *.node
+        delete require.cache[path];
+      }
     }
   }
-  return response;
 };
 
 const getIotWebsocketEndpoint = async (region: string) => {
