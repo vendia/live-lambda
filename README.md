@@ -1,6 +1,6 @@
 # live-lambda
 
-A powerful development CLI tool designed for AWS Lambda functions. Proxy your lambda function executions directly to your development environment to enable quicker iterations and hot reloading.
+A powerful development CLI tool designed for local development with AWS Lambda functions. Proxy your lambda function executions directly to your development environment to enable quicker iterations and hot reloading.
 
 ## Overview
 
@@ -8,10 +8,8 @@ A powerful development CLI tool designed for AWS Lambda functions. Proxy your la
 
 ## Features
 
-- **Easy Integration**: Quickly integrate with existing AWS Lambda functions.
-- **Performance Optimization**: Designed to minimize latency and maximize performance.
-- **Security**: Implements best practices to ensure secure communication between your services and AWS Lambda.
-- **Customization**: Offers extensive customization options to fit various use cases and requirements.
+- **Live Environment**: Proxy AWS requests to your local machine, supporting live edits of your Lambda Function, while still interacting with other AWS services.
+- **Quick Development Cycles**: Instead of waiting for a long CloudFormation deploy, debug your lambda with millisecond latency.
 
 ## Installation
 
@@ -52,12 +50,9 @@ Here's a simple example to get you started:
 live-lambda start --name HelloWorldFunction --path lambda/index.js
 ```
 
-This command does something amazing with your AWS Lambda functions.
+This command will:
 
-## Contributing
-
-We welcome contributions! Please read our Contributing Guide for details on how to submit pull requests, how to propose features, and how to report bugs.
-
-### License
-
-live-lambda is licensed under the ISC license. See the LICENSE file for more details.
+1. Replace the lambda function in AWS with a proxy that forwards requests to AWS IOT
+2. Starts a websocket listener on your machine with authorization to read from the IOT endpoint
+3. Invokes the function at the specified path
+4. Returns the response back through IOT, which returns back to the lambda proxy

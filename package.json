@@ -23,7 +23,7 @@
     "Serverless"
   ],
   "author": "Jake Partusch <jake@vendia.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/vendia/live-lambda/issues"
   },
