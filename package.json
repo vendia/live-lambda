@@ -1,6 +1,6 @@
 {
   "name": "@vendia/live-lambda",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A local development tool for AWS Lambda functions",
   "main": "index.js",
   "bin": {
@@ -52,6 +52,8 @@
     "archiver": "^7.0.1",
     "aws-iot-device-sdk-v2": "^1.19.5",
     "consola": "^3.2.3",
-    "esbuild": "^0.23.0"
+    "esbuild": "^0.23.0",
+    "ts-node": "^10.9.2",
+    "yargs": "^17.7.2"
   }
 }
