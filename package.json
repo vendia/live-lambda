@@ -16,6 +16,16 @@
     "type": "git",
     "url": "git+https://github.com/vendia/live-lambda.git"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "contributors": [
+    "Jake Partusch <jake@vendia.com>"
+  ],
   "keywords": [
     "AWS",
     "Lambda",
