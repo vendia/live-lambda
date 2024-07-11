@@ -33,7 +33,6 @@ const invokeByPath = async (path: string, event: any, context: any) => {
   const { handler: fn } = await import(
     `${path}?cacheBust=${Number(new Date())}`
   );
-  console.log(handler);
   try {
     const response = await fn(event, context);
     return response;
