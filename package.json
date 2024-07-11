@@ -1,6 +1,6 @@
 {
   "name": "@vendia/live-lambda",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A local development tool for AWS Lambda functions",
   "main": "index.js",
   "bin": {
@@ -39,21 +39,21 @@
   },
   "homepage": "https://github.com/vendia/live-lambda#readme",
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.4",
     "@types/archiver": "^6.0.2",
     "@types/node": "^20.14.9",
-    "@types/yargs": "^17.0.32",
-    "typescript": "^5.5.3"
+    "@types/yargs": "^17.0.32"
   },
   "dependencies": {
     "@aws-sdk/client-iot": "^3.609.0",
     "@aws-sdk/client-lambda": "^3.609.0",
     "@aws-sdk/util-utf8-browser": "^3.259.0",
+    "@tsconfig/node20": "^20.1.4",
     "archiver": "^7.0.1",
     "aws-iot-device-sdk-v2": "^1.19.5",
     "consola": "^3.2.3",
     "esbuild": "^0.23.0",
     "ts-node": "^10.9.2",
+    "typescript": "^5.5.3",
     "yargs": "^17.7.2"
   }
 }
