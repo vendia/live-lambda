@@ -51,7 +51,7 @@
     "archiver": "^7.0.1",
     "aws-iot-device-sdk-v2": "^1.19.5",
     "consola": "^3.2.3",
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.25.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
     "yargs": "^17.7.2"
